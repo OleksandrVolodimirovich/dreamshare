@@ -1,0 +1,28 @@
+:root{
+  --accent: #FF4E50;
+  --primery: #ffffff;
+  --secondary: #444444;
+  --tekst1: #F7F3F2;
+}
+
+html{
+  scroll-behavior: smooth;
+}
+body{
+  min-width: 320px;
+  font-size: 14px;
+  color: var(--primery);
+  @extend %montserrat-700;
+  position: relative;
+}
+.container{
+  max-width: 940px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+.title{
+  font-size: 26px;
+  line-height: 32px;
+  color: var(--secondary);
+  text-align: center;
+}

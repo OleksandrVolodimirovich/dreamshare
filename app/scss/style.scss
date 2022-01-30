@@ -1,0 +1,137 @@
+@import 'vars';
+@import 'fonts';
+@import 'reset';
+@import 'global';
+
+.header{
+  height: 100vh;
+  background: #FF4E50 url("../images/bg-header.jpg") no-repeat center;
+  background-size: cover;
+  position: relative;
+  z-index: 1;
+  &::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(360deg, #FF4E50 0%, #F9D423 100%);
+    opacity: 0.1;
+    z-index: -1;
+  }
+  &-top{
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 99;
+  }
+  & a{
+    color: var(--primery);
+  }
+  &__content-inner{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 100vh;
+  }
+  &__title{
+    font-size: 52px;
+    line-height: 63px;
+    max-width: 500px;
+    text-align: center;
+    margin-top: auto;
+  }
+  &__text{
+    @extend %montserrat-300;
+    font-size: 24px;
+    line-height: 24px;
+    color: var(--tekst1);
+    margin: 28px 0 33px 0;
+    text-align: center;
+  }
+  &__link{
+    font-size: 14px;
+    line-height: 17px;
+    background: var(--accent);
+    border-radius: 40px;
+    margin-bottom: auto;
+    padding: 12px 19px;
+    transition: all .4s;
+    &:hover{
+      color: var(--accent);
+      background: var(--primery);
+    }
+  }
+}
+.nav{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-right: 20px;
+  padding: 40px 0 40px 0;
+  &-brand{
+    font-size: 20px;
+    line-height: 24px;
+    transition: all 0.3s ease;
+    &:hover{
+      background: linear-gradient(to right, #FFFFFF 0%, #FF4E50 100%);
+      transition: all 0.3s ease;
+      animation: hover-logo;
+      animation-duration: 1s;
+    }
+  }
+  &-log{
+    display: flex;
+    align-items: center;
+  }
+  &__item{
+    padding: 5px 18px;
+    border: 2px solid transparent;
+    border-radius: 40px;
+    transition: all .3s;
+    &.--line:hover{
+      border: 2px solid var(--primery);
+      border-radius: 40px; 
+    }
+  }
+  &__link{
+    @extend %montserrat-400;
+    font-size: 14px;
+    line-height: 17px;
+  }
+}
+@keyframes hover-logo{
+  0%{
+    width: 0;
+    transform: translateX(9px);
+  }
+  30% {
+    transform: translateX(-9px);
+  }
+  40% {
+    transform: translateX(6px);
+  }
+  50% {
+    transform: translateX(-6px);
+  }
+  65% {
+    transform: translateX(3px);
+  }
+  100%{
+    width: 154px;
+    transform: translateX(0px);
+  }
+}
+
+.how{
+  padding-top: 89px;
+}
+
+
+
+
+
+@import 'media';

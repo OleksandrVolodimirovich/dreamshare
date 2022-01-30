@@ -1,0 +1,28 @@
+# standart
+.DS_Store
+.idea/
+.idea/*
+.vscode
+*.sublime*
+
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+npm-debug.*
+yarn-debug.log*
+yarn-error.log*
+
+# custom
+dist/
+/build
+node_modules/
+package-lock.json
+app/css/*
+.jshintrc
+/.pnp
+.pnp.js
+
+# testing
+/coverage
