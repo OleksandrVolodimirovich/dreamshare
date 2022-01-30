@@ -48,7 +48,7 @@
     @extend %montserrat-300;
     font-size: 24px;
     line-height: 24px;
-    color: var(--tekst1);
+    color: var(--text1);
     margin: 28px 0 33px 0;
     text-align: center;
   }
@@ -128,6 +128,52 @@
 
 .how{
   padding-top: 89px;
+  padding-bottom: 95px;
+  &__items{
+    display: flex;
+    column-gap: 20px;
+  }
+  &__item{
+    max-height: 400px;
+    max-width: 300px;
+    position: relative;
+    margin-top: 35px;
+    transition: all .3s;
+    cursor: pointer;
+    &:hover{
+      box-shadow: 0 14px 30px -15px rgba(0,0,0, .75);
+      transform: scale(1.1);
+    }
+  }
+  &__item-box{
+    position: absolute;
+    bottom: 0;
+    padding: 20px 25px;
+  }
+  &__item-img{
+    height: 100%;
+  }
+  &__item-step{
+    display: inline-block;
+    @extend %montserrat-400;
+    font-size: 10px;
+    line-height: 12px;
+    background: #FF4E50;
+    border-radius: 40px;
+    padding: 5px 19px 3px;
+    margin-bottom: 23px;
+  }
+  &__item-title{
+    font-size: 24px;
+    line-height: 26px;
+    margin-bottom: 23px;
+  }
+  &__item-text{
+    @extend %montserrat-400;
+    font-size: 14px;
+    line-height: 14px;
+    color: var(--text2);
+  }
 }
 
 
